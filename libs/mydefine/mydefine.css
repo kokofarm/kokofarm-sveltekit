@@ -1,0 +1,57 @@
+/*----------------------------------------------------------------------------------------------------*/
+/* jqGrid Style적용																					
+/*----------------------------------------------------------------------------------------------------*/
+
+/*jqGrid Header Color*/
+.ui-jqgrid .ui-jqgrid-labels th.ui-th-column {
+	/*background-color: #EEEEEE;*/
+	background-color: #F9F6FA;
+	background-image: none;
+}
+/*jqGrid Header 높이 조정*/
+.ui-jqgrid .ui-jqgrid-labels th.ui-th-column div {
+   white-space:normal !important;
+   height:auto !important;
+   font-size:14px !important;
+}
+
+/*jqGrid Row Font Size*/
+.ui-jqgrid tr.jqgrow td{
+	font-size:14px !important;
+	/*height:18px !important; 필요없음*/
+	white-space: nowrap !important; /*내려쓰기 하지 않도록 함*/
+}
+/*jqGrid Add/edit form font size*/
+.ui-jqdialog { font-size: 12px; }
+
+/* jqGrid 가로 스크롤바 없애기*/
+.ui-jqgrid .ui-jqgrid-bdiv {
+  position: relative; 
+  margin: 0em; 
+  padding:0; 
+  /*overflow: auto;*/
+  overflow-x:hidden; 
+  overflow-y:auto; 
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* 좌측날개 등 Table에 border 없애기
+/*----------------------------------------------------------------------------------------------------*/
+.table-border-strip {border:0px}
+.table-border-strip tr, th, td {border:0px}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Calendar Style적용
+/*----------------------------------------------------------------------------------------------------*/
+.fc-event{ padding:0px; padding-left:5px; text-align:left; font-size:12px; }	/*Calendar 내용의 Font/Align/padding */
+.fc-day-sun, .fc-day-sat {background:#FDFBFD}									/*Calendar 토/일 Background Color    */
+.fc-toolbar-title{ font-size: 20px !important; }								/*Calendar 년월 Font                 */
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* 좌측날개(농장목록) hover시 색상변경
+/*----------------------------------------------------------------------------------------------------*/
+.avatar-title:hover {background-color:#E1665D !important} 
+
+
