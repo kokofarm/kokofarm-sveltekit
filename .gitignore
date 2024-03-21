@@ -382,4 +382,5 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/svelte,visualstudiocode,intellij+all,eclipse,macos,windows,node
 
+# Linux nohup log file
 nohup.out
