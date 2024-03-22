@@ -1,15 +1,20 @@
 <script>
   import { name } from '@store/mainStore'
   import { page } from '$app/stores'
+  import { onMount } from 'svelte';
   import { isBrowser, isMobile } from 'react-device-detect';
   import TopCollapseItem from '../../../components/Top_collapse_item.svelte';
 
-  // const userLanguage = navigator.language;
-	// const { lang = 'ko' } = $page.params;
+  onMount(async () => {
+		const userLanguage = navigator.language;
+    const { lang = 'ko' } = $page.params;
+    
+    console.log('lang: ' + lang)
+    console.log('isMobile: ' + isMobile)
+    console.log('language: ' + userLanguage)
+	});
+
   
-  // console.log('lang: ' + lang)
-  // console.log('isMobile: ' + isMobile)
-  // console.log('language: ' + userLanguage)
 
   const topCollapseItems = [
     {id: 1, title: '입추(동)', value: '5'},
