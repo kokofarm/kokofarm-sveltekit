@@ -10,11 +10,15 @@ export default defineConfig({
 		fs: {
 		  	// 서빙 허용 목록에 'libs' 디렉토리 추가
 			allow: [resolve(process.cwd(), 'libs')]
-		}
+		},
+		host: true,
+		hmr: {
+      		clientPort: 5173,
+    	},
 	  },
 	preview:{
-	port:4173,
-	strictPort:false,
+		port:4173,
+		strictPort:false,
 	},
 	resolve: {
 	alias: [
