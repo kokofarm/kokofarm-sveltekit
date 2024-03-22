@@ -16,6 +16,9 @@ export default defineConfig({
 		// 	port: 5173,
 		// 	protocol: "wss",
 		// },
+		hmr: {
+			overlay: false
+		},
 	  },
 	preview:{
 		port:4173,
