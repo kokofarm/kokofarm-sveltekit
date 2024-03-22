@@ -13,8 +13,9 @@ export default defineConfig({
 		},
 		host: true,
 		hmr: {
-      		clientPort: 5173,
-    	},
+			port: 5173,
+			protocol: "wss",
+		},
 	  },
 	preview:{
 		port:4173,
