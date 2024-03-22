@@ -20,10 +20,22 @@
     {id: 6, title: '솎기수수', value: '0'},
   ]
 
+  $: showData = ''
+
+  const fetchData = () => {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => {
+        console.log(json)
+        showData = JSON.stringify(json)
+      })
+  }
 </script>
 
 <!-- Begin page -->
 <div>
+  <button on:click={fetchData}>Fetch</button>
+  <p>{showData}</p>
   <header id="page-topbar">
 
     <!--navbar-header-->
