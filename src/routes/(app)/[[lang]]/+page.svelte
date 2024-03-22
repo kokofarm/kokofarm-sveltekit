@@ -5,15 +5,16 @@
   import { isBrowser, isMobile } from 'react-device-detect';
   import TopCollapseItem from '../../../components/Top_collapse_item.svelte';
 
+  const { lang = 'ko' } = $page.params;
+
   onMount(async () => {
 		const userLanguage = navigator.language;
-    const { lang = 'ko' } = $page.params;
     
-    console.log('lang: ' + lang)
-    console.log('isMobile: ' + isMobile)
-    console.log('language: ' + userLanguage)
+    console.log('userLanguage: ' + userLanguage)
 	});
 
+  console.log('isMobile: ' + isMobile)
+  console.log('lang: ' + lang)
   
 
   const topCollapseItems = [
@@ -27,20 +28,10 @@
 
   $: showData = ''
 
-  const fetchData = () => {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-      .then(json => {
-        console.log(json)
-        showData = JSON.stringify(json)
-      })
-  }
 </script>
 
 <!-- Begin page -->
 <div>
-  <button on:click={fetchData}>Fetch</button>
-  <p>{showData}</p>
   <header id="page-topbar">
 
     <!--navbar-header-->
