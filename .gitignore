@@ -384,3 +384,6 @@ $RECYCLE.BIN/
 
 # Linux nohup log file
 nohup.out
+
+# build folder
+/build/
