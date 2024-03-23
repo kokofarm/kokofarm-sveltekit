@@ -35,15 +35,16 @@
     // fetch('http://192.168.0.33/monitor/20/login_action.php', {
     // fetch('http://192.168.0.33/api/app/login.php', {
     // fetch('http://localhost:8081/app/login.php', {
-    fetch('https://jsonplaceholder.typicode.com/todos/1', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-      },
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+    //   },
 
-      body: 'userName=sean&pw=1234'
+    //   body: 'userName=sean&pw=1234'
 
-    })
+    // })
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    
     // .then(response => console.log(response))
     .then(response => response.json())
     .then(json => {
