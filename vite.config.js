@@ -17,7 +17,7 @@ export default defineConfig({
 		// 	protocol: "wss",
 		// },
 		hmr: {
-			overlay: false
+			port: 8886,
 		},
 	  },
 	preview:{

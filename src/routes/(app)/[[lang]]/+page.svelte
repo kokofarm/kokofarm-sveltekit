@@ -28,10 +28,35 @@
 
   $: showData = ''
 
+  // _POST Form
+  const fetchData = () => {
+    console.log('start fetching ...')
+
+    // fetch('http://192.168.0.33/monitor/20/login_action.php', {
+    // fetch('http://192.168.0.33/api/app/login.php', {
+    fetch('http://localhost:8081/app/login.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+      },
+
+      body: 'userName=sean&pw=1234'
+
+    })
+    // .then(response => console.log(response))
+    .then(response => response.json())
+    .then(json => {
+      console.log(json)
+      showData = JSON.stringify(json)
+    })
+  }
+  
 </script>
 
 <!-- Begin page -->
 <div>
+  <button on:click={fetchData}>Fetch</button>
+  <p>{showData}</p>
   <header id="page-topbar">
 
     <!--navbar-header-->
