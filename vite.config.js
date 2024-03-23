@@ -6,7 +6,7 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	server: {
 		port:5173,
-		strictPort:false,
+		strictPort:true,
 		fs: {
 		  	// 서빙 허용 목록에 'libs' 디렉토리 추가
 			allow: [resolve(process.cwd(), 'libs')]
@@ -22,7 +22,7 @@ export default defineConfig({
 	  },
 	preview:{
 		port:4173,
-		strictPort:false,
+		strictPort:true,
 	},
 	resolve: {
 	alias: [
