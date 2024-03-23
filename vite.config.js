@@ -13,12 +13,9 @@ export default defineConfig({
 		},
 		// host: true,
 		// hmr: {
-		// 	port: 5173,
+		// 	port: 8886,
 		// 	protocol: "wss",
 		// },
-		hmr: {
-			port: 8886,
-		},
 	  },
 	preview:{
 		port:4173,
